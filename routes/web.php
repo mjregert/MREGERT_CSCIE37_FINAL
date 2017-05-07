@@ -18,6 +18,18 @@ Route::get('/', function () {
 
 Route::get('/wishlists', 'WishListController@index');
 
+if(App::environment('local')) {
+
+    Route::get('/drop', function() {
+
+        DB::statement('DROP database pyggebank');
+        DB::statement('CREATE database pyggebank');
+
+        return 'Dropped pyggebank; created pyggebank.';
+    });
+
+};
+
 Route::get('/debug', function() {
 
 	echo '<pre>';

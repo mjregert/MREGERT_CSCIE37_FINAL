@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Wishlist;
 
 class WishListController extends Controller
 {
@@ -13,9 +14,9 @@ class WishListController extends Controller
      */
     public function index()
     {
-        //
-        return response('Hello World', 200)
-                  ->header('Content-Type', 'text/plain');
+        $wishlists = Wishlist::all();
+        return response($wishlists, 200)
+                  ->header('Content-Type', 'application/json');
     }
 
     /**
