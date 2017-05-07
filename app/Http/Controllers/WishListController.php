@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Wishlist;
 
-class WishListController extends Controller
+class WishlistController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +14,7 @@ class WishListController extends Controller
      */
     public function index()
     {
+        // Get all of the wishlists from the database, and return them as JSON data
         $wishlists = Wishlist::all();
         return response($wishlists, 200)
                   ->header('Content-Type', 'application/json');
@@ -37,7 +38,16 @@ class WishListController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validate the user input here
+
+        $wishlist = new Wishlist();
+
+        # Set the parameters
+        # Note how each parameter corresponds to a field in the table
+
+
+
+
     }
 
     /**

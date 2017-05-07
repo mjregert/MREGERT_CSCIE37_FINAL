@@ -28,6 +28,8 @@ class CreateWishlistsTable extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->integer('total');
+            $table->integer('saving');
+            $table->integer('buyDate');
         });
     }
 

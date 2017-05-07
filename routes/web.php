@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/wishlists', 'WishListController@index');
+Route::get('/wishlists', 'WishlistController@index');
 
 if(App::environment('local')) {
 

@@ -18,8 +18,8 @@ class WishlistTableSeeder extends Seeder
             'cc' => 'US',
             'name' => 'My First Wishlist',
             'description' => 'A test wishlist populated by the laravel framework seeder.',
-            'total' => '399'
-            //'purchaseDate' => ''
+            'totalA' => '399'
+            ''
         ]);
 
         DB::table('wishlists')->insert([
@@ -30,7 +30,6 @@ class WishlistTableSeeder extends Seeder
             'name' => 'Мой первый русский список',
             'description' => 'Испытательный список желаний, заполненный сеялкой рамки laravel.',
             'total' => '345'
-            //'purchaseDate' => ''
         ]);
 
         DB::table('wishlists')->insert([
@@ -41,7 +40,6 @@ class WishlistTableSeeder extends Seeder
             'name' => '私の最初の日本の欲しいもの',
             'description' => 'laravelフレームワークシーダーによって作成されたテストウィッシュリスト。',
             'total' => '1'
-            //'purchaseDate' => ''
         ]);
     }
 }
