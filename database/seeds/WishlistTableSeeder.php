@@ -14,8 +14,7 @@ class WishlistTableSeeder extends Seeder
         DB::table('wishlists')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'll' => 'en',
-            'cc' => 'US',
+            'locale' => 'en-US',
             'name' => 'My First Wishlist',
             'description' => 'A test wishlist populated by the laravel framework seeder.',
             'total' => '399',
@@ -26,8 +25,7 @@ class WishlistTableSeeder extends Seeder
         DB::table('wishlists')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'll' => 'en',
-            'cc' => 'UK',
+            'locale' => 'en-UK',
             'name' => 'My First UK Wishlist',
             'description' => 'A test wishlist populated by the laravel framework seeder.',
             'total' => '399',
@@ -38,8 +36,7 @@ class WishlistTableSeeder extends Seeder
         DB::table('wishlists')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'll' => 'de',
-            'cc' => 'DE',
+            'locale' => 'de-dE',
             'name' => 'My First Wunschliste',
             'description' => 'Ein Test der Wunschliste von der Laravel Rahmen Seeder bevölkert.',
             'total' => '399',
@@ -50,8 +47,7 @@ class WishlistTableSeeder extends Seeder
         DB::table('wishlists')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'll' => 'ru',
-            'cc' => 'RU',
+            'locale' => 'ru-RU',
             'name' => 'Мой первый русский список',
             'description' => 'Испытательный список желаний, заполненный сеялкой рамки laravel.',
             'total' => '399',
@@ -62,8 +58,7 @@ class WishlistTableSeeder extends Seeder
         DB::table('wishlists')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'll' => 'ja',
-            'cc' => 'JP',
+            'locale' => 'ja-JP',
             'name' => '私の最初の日本の欲しいもの',
             'description' => 'laravelフレームワークシーダーによって作成されたテストウィッシュリスト。',
             'total' => '399',

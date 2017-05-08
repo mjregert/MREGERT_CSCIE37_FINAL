@@ -23,8 +23,7 @@ class CreateWishlistsTable extends Migration
             $table->timestamps();
 
             # The rest of the fields...
-            $table->char('ll', 2);
-            $table->char('cc', 2);
+            $table->char('locale', 5);
             $table->string('name');
             $table->text('description')->nullable();
             $table->integer('total');

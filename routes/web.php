@@ -16,7 +16,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/wishlists', 'WishlistController@index');
+Route::get('/wishlists',  'WishlistController@index');
+Route::post('/wishlists', 'WishlistController@store');
+
+
+
+
 
 if(App::environment('local')) {
 
