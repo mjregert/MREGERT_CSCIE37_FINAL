@@ -25,17 +25,6 @@ class WishlistTableSeeder extends Seeder
         DB::table('wishlists')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'locale' => 'en-UK',
-            'name' => 'My First UK Wishlist',
-            'description' => 'A test wishlist populated by the laravel framework seeder.',
-            'total' => '399',
-            'saving' => '25',
-            'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
-        ]);
-
-        DB::table('wishlists')->insert([
-            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
             'locale' => 'de-dE',
             'name' => 'My First Wunschliste',
             'description' => 'Ein Test der Wunschliste von der Laravel Rahmen Seeder bevölkert.',

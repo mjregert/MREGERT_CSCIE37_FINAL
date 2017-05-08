@@ -54,9 +54,20 @@ class WishitemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($iid)
     {
-        //
+        $wishitem = Wishitem::find($iid);
+        $wishitem->name = $request->name;
+        $wishitem->cost = $request->cost;
+
+        # Invoke the Eloquent save() method
+        # This will update the existing row in the `campgrounds` table, with the above data
+        $wishitem->save();
+
+        // Get all of the wishlists from the database, and return them as JSON data
+        $wishlists = Wishlist::with(['wishitems'])->get();
+        return response($wishlists, 200)
+                  ->header('Content-Type', 'application/json');
     }
 
     /**

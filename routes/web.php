@@ -15,13 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/wishlists',  'WishlistController@index');
-Route::post('/wishlists', 'WishlistController@store');
-
-
-
-
+Route::get('/wishlists',      'WishlistController@index');
+Route::post('/wishlists',     'WishlistController@store');
+Route::put('/wishlists/{id}', 'WishlistController@update');// This should have worked, but returns 405?!?
+Route::post('/wishlists/{id}', 'WishlistController@update');
 
 if(App::environment('local')) {
 

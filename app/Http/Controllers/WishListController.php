@@ -54,24 +54,6 @@ class WishlistController extends Controller
         $wishlists = Wishlist::with(['wishitems'])->get();
         return response($wishlists, 200)
                   ->header('Content-Type', 'application/json');
-
-        /*
-        $table->char('ll', 2);
-        $table->char('cc', 2);
-        $table->string('name');
-        $table->text('description')->nullable();
-        $table->integer('total');
-        $table->integer('saving');
-        $table->string('buyDate');
-
-        */
-
-        # Set the parameters
-        # Note how each parameter corresponds to a field in the table
-
-
-
-
     }
 
     /**
@@ -105,7 +87,21 @@ class WishlistController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $wishlist = Wishlist::find($id);
+
+        $wishlist->locale = $request->locale;
+        $wishlist->name = $request->name;
+        $wishlist->description = $request->description;
+        $wishlist->total = $request->total;
+        $wishlist->saving = $request->saving;
+        $wishlist->buyDate = $request->buyDate;
+
+        $wishlist->save();
+
+        // Get all of the wishlists from the database, and return them as JSON data
+        $wishlists = Wishlist::with(['wishitems'])->get();
+        return response($wishlists, 200)
+                  ->header('Content-Type', 'application/json');
     }
 
     /**
