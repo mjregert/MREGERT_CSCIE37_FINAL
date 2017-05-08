@@ -15,7 +15,7 @@ class WishlistController extends Controller
     public function index()
     {
         // Get all of the wishlists from the database, and return them as JSON data
-        $wishlists = Wishlist::all();
+        $wishlists = Wishlist::with(['wishitems'])->get();
         return response($wishlists, 200)
                   ->header('Content-Type', 'application/json');
     }
