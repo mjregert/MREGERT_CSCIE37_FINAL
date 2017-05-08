@@ -18,8 +18,33 @@ class WishlistTableSeeder extends Seeder
             'cc' => 'US',
             'name' => 'My First Wishlist',
             'description' => 'A test wishlist populated by the laravel framework seeder.',
-            'totalA' => '399'
-            ''
+            'total' => '399',
+            'saving' => '25',
+            'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
+        ]);
+
+        DB::table('wishlists')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'll' => 'en',
+            'cc' => 'UK',
+            'name' => 'My First UK Wishlist',
+            'description' => 'A test wishlist populated by the laravel framework seeder.',
+            'total' => '399',
+            'saving' => '25',
+            'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
+        ]);
+
+        DB::table('wishlists')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'll' => 'de',
+            'cc' => 'DE',
+            'name' => 'My First Wunschliste',
+            'description' => 'Ein Test der Wunschliste von der Laravel Rahmen Seeder bevölkert.',
+            'total' => '399',
+            'saving' => '25',
+            'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
         ]);
 
         DB::table('wishlists')->insert([
@@ -29,7 +54,9 @@ class WishlistTableSeeder extends Seeder
             'cc' => 'RU',
             'name' => 'Мой первый русский список',
             'description' => 'Испытательный список желаний, заполненный сеялкой рамки laravel.',
-            'total' => '345'
+            'total' => '399',
+            'saving' => '25',
+            'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
         ]);
 
         DB::table('wishlists')->insert([
@@ -39,7 +66,9 @@ class WishlistTableSeeder extends Seeder
             'cc' => 'JP',
             'name' => '私の最初の日本の欲しいもの',
             'description' => 'laravelフレームワークシーダーによって作成されたテストウィッシュリスト。',
-            'total' => '1'
+            'total' => '399',
+            'saving' => '25',
+            'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
         ]);
     }
 }
