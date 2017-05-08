@@ -17,15 +17,15 @@ class WishitemTableSeeder extends Seeder
         DB::table('wishitems')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'name' => 'Wishitem #1',
-            'cost' => '42',
+            'name' => 'Sony Playstation',
+            'cost' => '400',
             'wishlist_id' => $wishlist_id
         ]);
 
         DB::table('wishitems')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'name' => 'Wishitem #2',
+            'name' => 'Tennis Shoes',
             'cost' => '100',
             'wishlist_id' => $wishlist_id
         ]);
@@ -33,8 +33,8 @@ class WishitemTableSeeder extends Seeder
         DB::table('wishitems')->insert([
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'name' => 'Wishitem #3',
-            'cost' => '123',
+            'name' => 'Bicycle',
+            'cost' => '125',
             'wishlist_id' => $wishlist_id
         ]);
 
@@ -61,6 +61,40 @@ class WishitemTableSeeder extends Seeder
             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
             'name' => 'Regenstiefel',
             'cost' => '35',
+            'wishlist_id' => $wishlist_id
+        ]);
+
+        $wishlist_id = Wishlist::where('name', '=', 'Мой первый русский список')->pluck('id')->first();
+
+        DB::table('wishitems')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'Футбол',
+            'cost' => '24',
+            'wishlist_id' => $wishlist_id
+        ]);
+
+        DB::table('wishitems')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'Монопольная игра',
+            'cost' => '15',
+            'wishlist_id' => $wishlist_id
+        ]);
+
+        DB::table('wishitems')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'Джинсы',
+            'cost' => '40',
+            'wishlist_id' => $wishlist_id
+        ]);
+
+        DB::table('wishitems')->insert([
+            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+            'name' => 'Чехол для телефона',
+            'cost' => '45',
             'wishlist_id' => $wishlist_id
         ]);
     }

@@ -28,8 +28,8 @@ class WishlistTableSeeder extends Seeder
             'locale' => 'de-dE',
             'name' => 'My First Wunschliste',
             'description' => 'Ein Test der Wunschliste von der Laravel Rahmen Seeder bevölkert.',
-            'total' => '399',
-            'saving' => '25',
+            'total' => '80',
+            'saving' => '10',
             'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
         ]);
 
@@ -39,8 +39,8 @@ class WishlistTableSeeder extends Seeder
             'locale' => 'ru-RU',
             'name' => 'Мой первый русский список',
             'description' => 'Испытательный список желаний, заполненный сеялкой рамки laravel.',
-            'total' => '399',
-            'saving' => '25',
+            'total' => '25',
+            'saving' => '5',
             'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
         ]);
 
@@ -50,8 +50,8 @@ class WishlistTableSeeder extends Seeder
             'locale' => 'ja-JP',
             'name' => '私の最初の日本の欲しいもの',
             'description' => 'laravelフレームワークシーダーによって作成されたテストウィッシュリスト。',
-            'total' => '399',
-            'saving' => '25',
+            'total' => '100',
+            'saving' => '12',
             'buyDate' =>  Carbon\Carbon::now()->toDateTimeString()
         ]);
     }
